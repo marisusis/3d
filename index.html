@@ -15,9 +15,13 @@
 			var renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
-			var triangle = new THREE.Triangle(1, 2, 3);
+			/*var triangle = new THREE.Triangle(1, 2, 3);
 			var tmat = new THREE.MeshBasicMaterial( { color: 0x00cc00 } );
-			var tri = new THREE.Mesh( triangle, tmat );
+			var tri = new THREE.Mesh( triangle, tmat );*/
+			var geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
+var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+var cylinder = new THREE.Mesh( geometry, material );
+scene.add( cylinder );
 			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 			var cube = new THREE.Mesh( geometry, material );
