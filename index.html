@@ -41,14 +41,21 @@ scene.add( mesh );
 			var render = function () {
 				requestAnimationFrame( render );
 
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
-				cube.rotation.z += 0.01;
+				//cube.rotation.x += 0.01;
+				//cube.rotation.y += 0.01;
+				//cube.rotation.z += 0.01;
 				//sphere.rotation.z += 0.01;
 				//sphere.rotation.y += 0.01;
 				//sphere.rotation.z += 0.01;
 				mesh.rotation.x += 0.01;
+				mesh.rotation.y += 0.01;
+				mesh.rotation.z += 0.01;
 				torus.rotation.x += 0.01;
+				torus.rotation.y += 0.01;
+				torus.rotation.z += 0.01;
+				torusKnot.rotation.x += 0.01;
+				torusKnot.rotation.y += 0.01;
+				torusKnot.rotation.z += 0.01;
 				renderer.render(scene, camera);
 			};
 
