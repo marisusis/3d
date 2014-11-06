@@ -27,7 +27,7 @@ var geometry3 = new THREE.TorusKnotGeometry( 100, 50, 100, 32, 2, 3 );
 var material3 = new THREE.MeshNormalMaterial( { color: 0xffff00 } );
 var torusKnot = new THREE.Mesh( geometry3, material3 );
 scene.add( torusKnot );
-var geometry4 = new THREE.TextGeometry("Hello");
+var geometry4 = new THREE.TextGeometry( "Hello", size: 10 );
 var material4 = new THREE.MeshNormalMaterial( { color: 0xffff00 } );
 var text = new THREE.Mesh( geometry4, material4 );
 scene.add( text );
