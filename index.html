@@ -9,6 +9,9 @@
 	<body>
 		<script src="js/three.min.js"></script>
 		<script>
+		
+		
+		
 			var scene = new THREE.Scene();
 			var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
       camera.position.z = 400;
@@ -69,8 +72,7 @@ var mouseDown = false,
 }
 
     function rotateScene(deltaX, deltaY) {
-    sphere.rotation.y += deltaX / 100;
-    sphere.rotation.x += deltaY / 100;
+    
 }
 			var render = function () {
 				requestAnimationFrame( render );
@@ -81,7 +83,8 @@ var mouseDown = false,
 				//sphere.rotation.z += 0.01;
 			//	/sphere.rotation.y += 0.01;
 			//	sphere.rotation.z += 0.01;
-
+sphere.rotation.y += deltaX / 100;
+    sphere.rotation.x += deltaY / 100;
 				renderer.render(scene, camera);
 			};
 
