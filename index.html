@@ -24,16 +24,63 @@
 			var sphere = new THREE.Mesh(new THREE.SphereGeometry(100, 10, 100), new THREE.MeshNormalMaterial( { color: 0x00ffff }));
       sphere.overdraw = true;
       scene.add(sphere);
+var mouseDown = false,
+        mouseX = 0,
+        mouseY = 0;
 
+    function onMouseMove(evt) {
+        if (!mouseDown) {
+            return;
+        }
+
+        evt.preventDefault();
+
+        var deltaX = evt.clientX - mouseX,
+            deltaY = evt.clientY - mouseY;
+        mouseX = evt.clientX;
+        mouseY = evt.clientY;
+        rotateScene(deltaX, deltaY);
+    }
+
+    function onMouseDown(evt) {
+        evt.preventDefault();
+
+        mouseDown = true;
+        mouseX = evt.clientX;
+        mouseY = evt.clientY;
+    }
+
+    function onMouseUp(evt) {
+        evt.preventDefault();
+
+        mouseDown = false;
+    }
+
+    function addMouseHandler(canvas) {
+    canvas.addEventListener('mousemove', function (e) {
+        onMouseMove(e);
+    }, false);
+    canvas.addEventListener('mousedown', function (e) {
+        onMouseDown(e);
+    }, false);
+    canvas.addEventListener('mouseup', function (e) {
+        onMouseUp(e);
+    }, false);
+}
+
+    function rotateScene(deltaX, deltaY) {
+    sphere.rotation.y += deltaX / 100;
+    sphere.rotation.x += deltaY / 100;
+}
 			var render = function () {
 				requestAnimationFrame( render );
 
 				cube.rotation.x += 0.01;
 				cube.rotation.y += 0.01;
 				cube.rotation.z += 0.01;
-				sphere.rotation.z += 0.01;
-				sphere.rotation.y += 0.01;
-				sphere.rotation.z += 0.01;
+				//sphere.rotation.z += 0.01;
+			//	/sphere.rotation.y += 0.01;
+			//	sphere.rotation.z += 0.01;
 
 				renderer.render(scene, camera);
 			};
