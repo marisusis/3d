@@ -36,7 +36,7 @@ camera.position.z = 40;
 			var render = function () {
 				requestAnimationFrame( render );
 				var d = new Date();
-				var n = d.getTime();
+				var n = d.getTime()/100;
 				mesh.rotation.x += 0.06*n;
 				mesh2.rotation.x += 0.05*n;
 				mesh3.rotation.x += 0.04*n;
