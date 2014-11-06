@@ -31,15 +31,16 @@ var geometry4 = new THREE.RingGeometry( 16, 20, 32 );
 var material4 = new THREE.MeshBasicMaterial( { color: 0x00ff00, side: THREE.DoubleSide, wireframe: true } );
 var mesh4 = new THREE.Mesh( geometry4, material4 );
 scene.add( mesh4 );
-camera.position.z = 50;
+camera.position.z = 40;
 
 			var render = function () {
 				requestAnimationFrame( render );
-
-				mesh.rotation.x += 0.06;
-				mesh2.rotation.x += 0.05;
-				mesh3.rotation.x += 0.04;
-				mesh4.rotation.x += 0.03;
+				var d = new Date();
+				var n = d.getTime();
+				mesh.rotation.x += 0.06*n;
+				mesh2.rotation.x += 0.05*n;
+				mesh3.rotation.x += 0.04*n;
+				mesh4.rotation.x += 0.03*n;
 
 				renderer.render(scene, camera);
 			};
