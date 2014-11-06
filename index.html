@@ -20,7 +20,7 @@
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 var geometry2 = new THREE.TorusGeometry( 100, 20, 24, 100 );
-var material2 = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+var material2 = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
 var torus = new THREE.Mesh( geometry2, material2 );
 scene.add( torus );
 			var geometry = new THREE.BoxGeometry( 300, 300, 300 );
