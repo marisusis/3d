@@ -31,6 +31,9 @@ var geometry4 = new THREE.RingGeometry( 16, 20, 32 );
 var material4 = new THREE.MeshBasicMaterial( { color: 0x00ff00, side: THREE.DoubleSide, wireframe: true } );
 var mesh4 = new THREE.Mesh( geometry4, material4 );
 scene.add( mesh4 );
+var light = new THREE.PointLight( 0xff0000, 1, 100 );
+light.position.set( 10, 10, 10 );
+scene.add( light );
 camera.position.z = 40;
 
 			var render = function () {
