@@ -36,6 +36,9 @@ light.position.set( 10, 10, 10 );
 scene.add( light );
 camera.position.z = 40;
 camera.position.y = 10;
+var d = new Date();
+var n = d.getTime();
+camera.position.x = n * 0.000000001;
 
 			var render = function () {
 				requestAnimationFrame( render );
