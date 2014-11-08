@@ -23,7 +23,7 @@ var light = new THREE.PointLight( 0xff0000, 1, 100 );
 light.position.set( 300, 300, 320);
 scene.add( light );
 			var geometry = new THREE.BoxGeometry( 300, 300, 300 );
-			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
+			var material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
 			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
 			//var sphere = new THREE.Mesh(new THREE.SphereGeometry(100, 10, 100), new THREE.MeshNormalMaterial( { color: 0x00ffff, wireframe: true  }));
