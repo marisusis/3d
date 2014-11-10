@@ -31,12 +31,12 @@ var light4 = new THREE.PointLight( 0xdc322f, 2, 100 );
 light4.position.set( 3, 3, -3 );
 scene.add( light4 );
 var sphere = new THREE.SphereGeometry( 1, 100, 100 );
-var smat = new THREE.MeshBasicMaterial( { color: 0x00ddff } );
+var smat = new THREE.MeshBasicMaterial( { color: 0xffffff } );
 var s = new THREE.Mesh( sphere, smat );
 sphere.overdraw = true;
-s.position.x = light.position.x + 1;
-s.position.y = light.position.y + 1;
-s.position.z = light.position.z + 1;
+s.position.x = 3;
+s.position.y = 3;
+s.position.z = 3;
 scene.add( s );
 
 			var geometry = new THREE.BoxGeometry( 2, 2, 2 );
