@@ -18,14 +18,14 @@
 			var renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
-var light = new THREE.PointLight( 0x00cc00, 2, 100 );
+var light = new THREE.PointLight( 0x006600, 2, 100 );
 light.position.set( 3, 3, 3 );
 scene.add( light );
 var light2 = new THREE.PointLight( 0xff0000, 2, 100 );
 light2.position.set( -3, -3, -3 );
 scene.add( light2 );
 var light3 = new THREE.PointLight( 0xcccc00, 2, 100 );
-light3.position.set( -3, 3, -3 );
+light3.position.set( -3, 3, 3 );
 scene.add( light3 );
 			var geometry = new THREE.BoxGeometry( 2, 2, 2 );
 			var material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
