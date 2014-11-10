@@ -33,6 +33,7 @@ scene.add( light4 );
 var sphere = new THREE.SphereGeometry( 1, 100, 100 );
 var smat = new THREE.MeshBasicMaterial( { color: 0x00ddff } );
 var s = new THREE.Mesh( sphere, smat );
+sphere.overdraw = true;
 s.position.x = light.position.x + 1;
 s.position.y = light.position.y + 1;
 s.position.z = light.position.z + 1;
