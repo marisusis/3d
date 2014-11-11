@@ -17,6 +17,17 @@
       camera.position.z = 5;
 			var renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
+			var light = new THREE.PointLight( 0x00ddff, 2, 100 );
+light.position.set( 3, 3, 3 );
+scene.add( light );
+var sphere = new THREE.SphereGeometry( 1, 100, 100 );
+var smat = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+var s = new THREE.Mesh( sphere, smat );
+sphere.overdraw = true;
+s.position.x = 3;
+s.position.y = 3;
+s.position.z = 3;
+scene.add( s );
 			document.body.appendChild( renderer.domElement );var render = function () {
 				requestAnimationFrame( render );
 				//cube.rotation.x += 0.01;
